@@ -1,2 +1,3 @@
 CGroups v2 only
 
+systemd-cgls -> list current cgroups
