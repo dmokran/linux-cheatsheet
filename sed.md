@@ -1,14 +1,3 @@
-
-String replace (global - all instances in file)
-sed -i.bak 's/beta.kubernetes.io/kubernetes.io/g' complete-demo.yaml
-  -i -> in-place update (update file)
-  -i[xyz] -> in-place update but create a backup file with the "xyz" extension
-
-
-Sure! Below are the `sed` command examples with more detailed explanations.
-
----
-
 ### 1. **Replace a Word in a File (Basic Substitution)**
    ```bash
    sed 's/oldword/newword/' file.txt
@@ -152,7 +141,7 @@ Sure! Below are the `sed` command examples with more detailed explanations.
    echo "Hello 12345" | sed 's/\([0-9]\+\)/(&)/'
    ```
    - `\([0-9]\+\)` → Captures **one or more** digits.
-   - `\1` → References the matched number.
+   - `&` or `\1` → References the matched number since the pattern only has one matching group.
    - Output:
      ```
      Hello (12345)
